@@ -1,7 +1,7 @@
 {
   "name": "sibox",
   "version": "0.0.4",
-  "description": "Redifining Statistical Reports",
+  "description": "Statistical Report System",
   "author": "Guenton Brooks",
   "private": true,
   "scripts": {
