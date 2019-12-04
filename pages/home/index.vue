@@ -20,8 +20,8 @@
 export default {
   data() {
     return {
-      api: process.env.API_URL,
-      env: process.env.APP_ENV,
+      api: process.env.API_URL || "Api not found so using Default",
+      env: process.env.APP_ENV || "Env not found so using Default",
       test: process.env.TEST_SHIZNIT || "Test Shiznit not found so using Default"
     };
   }
