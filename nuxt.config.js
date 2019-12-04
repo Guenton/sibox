@@ -57,6 +57,11 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/dotenv-module
     "@nuxtjs/dotenv"
   ],
+  env: {
+    api: process.env.API_URL || "Api not found at Server Level",
+    env: process.env.APP_ENV || "Env not found at Server Level",
+    test: process.env.TEST_SHIZNIT || "Test Shiznit not found at Server Level"
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
