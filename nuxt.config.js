@@ -1,3 +1,4 @@
+require("dotenv").config();
 const colors = require("vuetify/es5/util/colors").default;
 
 module.exports = {
@@ -31,6 +32,16 @@ module.exports = {
    ** Plugins to load before mounting the App
    */
   plugins: [],
+  serverMiddleware: [
+    {
+      path: "/api",
+      handler: "~/server/routes/api.js"
+    },
+    {
+      path: "/auth",
+      handler: "~/server/routes/auth.js"
+    }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -42,7 +53,9 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
     // Doc: https://github.com/nuxt-community/eslint-module
-    "@nuxtjs/eslint-module"
+    "@nuxtjs/eslint-module",
+    // Doc: https://github.com/nuxt-community/dotenv-module
+    "@nuxtjs/dotenv"
   ],
   /*
    ** Axios module configuration

@@ -9,6 +9,21 @@
           </small>
         </footer>
       </blockquote>
+      <h1>{{ api }}</h1>
+      <h1>{{ env }}</h1>
+      <h1>{{ test }}</h1>
     </v-flex>
   </v-layout>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      api: process.env.API_URL,
+      env: process.env.APP_ENV,
+      test: process.env.TEST_SHIZNIT || "Test Shiznit not found so using Default"
+    };
+  }
+};
+</script>

@@ -26,8 +26,9 @@ async function start() {
 
   // Listen the server
   app.listen(port, host);
+  const serverAddress = process.env.BASE_URL || `http://${host}:${port}`;
   consola.ready({
-    message: `Server listening on http://${host}:${port}`,
+    message: "Server listening on " + serverAddress,
     badge: true
   });
 }

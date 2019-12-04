@@ -1,6 +1,14 @@
-# sibox
+# Sibox
 
 > Statistical Report System
+
+## Environment Variables
+```
+# Create a .env file in your application's root directory and assign the following values
+APP_ENV=[TEXT(optional) - Application's runtime environment]
+BASE_URL=[URL(optional) - Application's root web address]
+API_URL=[URL(required) - Application's API server address]
+```
 
 ## Build Setup
 
