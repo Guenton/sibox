@@ -9,7 +9,7 @@
         Statistical Report System
       </h2>
       <div class="links">
-        <v-btn large color="primary" to="/home">
+        <v-btn large color="primary" @click="loginHandler()">
           Login
         </v-btn>
         <v-btn large color="accent" to="/docs">
@@ -24,9 +24,15 @@
 import KLogo from "~/components/KLogo.vue";
 
 export default {
+  auth: false,
   layout: "splash",
   components: {
     KLogo
+  },
+  methods: {
+    loginHandler() {
+      this.$auth.loginWith("auth0");
+    }
   }
 };
 </script>

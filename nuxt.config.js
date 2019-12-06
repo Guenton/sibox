@@ -55,12 +55,32 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/eslint-module
     "@nuxtjs/eslint-module",
     // Doc: https://github.com/nuxt-community/dotenv-module
-    "@nuxtjs/dotenv"
+    "@nuxtjs/dotenv",
+    // Doc: https://auth.nuxtjs.org/guide/setup.html
+    "@nuxtjs/auth"
   ],
+  auth: {
+    redirect: {
+      login: "/",
+      logout: "/",
+      callback: "/home",
+      home: process.env.HOME_URL
+    },
+    strategies: {
+      auth0: {
+        domain: process.env.AUTH0_DOMAIN,
+        client_id: process.env.AUTH0_CLIENT_ID,
+        redirect_uri: process.env.HOME_URL
+      }
+    }
+  },
   env: {
     api: process.env.API_URL || "Api not found at Server Level",
     env: process.env.APP_ENV || "Env not found at Server Level",
     test: process.env.TEST_SHIZNIT || "Test Shiznit not found at Server Level"
+  },
+  router: {
+    middleware: ["auth"]
   },
   /*
    ** Axios module configuration

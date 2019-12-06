@@ -13,7 +13,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar :clipped-left="clipped" fixed app color="primary">
+    <v-app-bar :clipped-left="clipped" collapse-on-scroll fixed app color="primary">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-btn icon @click.stop="clipped = !clipped">
         <v-icon>mdi-application</v-icon>
