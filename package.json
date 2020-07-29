@@ -22,7 +22,7 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/eslint-module": "^1.1.0",
     "@nuxtjs/vuetify": "^1.0.0",
-    "auth0": "^2.20.0",
+    "auth0": "^2.27.1",
     "chart.js": "^2.9.3",
     "cross-env": "^6.0.3",
     "express": "^4.16.4",
